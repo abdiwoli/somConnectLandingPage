@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SomConnect Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background: #f9f9f9;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(to right, #4CAF50, #008CBA);
+            color: #fff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .header p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .header .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .header button {
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .header button:hover {
+            background: #e68a00;
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            background: #fff;
+        }
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #4CAF50;
+        }
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .feature {
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .feature img {
+            width: 60px;
+            margin-bottom: 1rem;
+        }
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: #f3f3f3;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+        .how-it-works h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #008CBA;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .step {
+            width: 280px;
+            text-align: center;
+        }
+        .step img {
+            width: 80px;
+            margin-bottom: 1rem;
+        }
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .step p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Call to Action Section */
+        .cta {
+            background: linear-gradient(to right, #008CBA, #4CAF50);
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .cta input {
+            width: 300px;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .cta button {
+            background: #ff9800;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .cta button:hover {
+            background: #e68a00;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        .footer a {
+            color: #ff9800;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .features h2, .how-it-works h2, .cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>SomConnect</h1>
+        <p>Effortless Booking for Hotels & Medical Centers in Ethiopia</p>
+        <div class="buttons">
+            <button onclick="handleJoin()">Join the Waitlist</button>
+            <button onclick="alert('Download feature coming soon!')">Download App</button>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="features-container">
+            <div class="feature">
+                <img src="home.jpeg" alt="Home Icon">
+                <h3>Smart Hotel Search</h3>
+                <p>Easily browse and book hotels instantly.</p>
+            </div>
+            <div class="feature">
+                <img src="hotels.jpeg" alt="Hotels Icon">
+                <h3>Medical Center Finder</h3>
+                <p>Discover top-rated healthcare providers.</p>
+            </div>
+            <div class="feature">
+                <img src="secure.png" alt="Secure Icon">
+                <h3>Secure Bookings</h3>
+                <p>Reliable and safe payment options.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="hotels.jpeg" alt="Download Icon">
+                <h3>Step 1</h3>
+                <p>Download the app.</p>
+            </div>
+            <div class="step">
+                <img src="medicalCenters.jpeg" alt="Search Icon">
+                <h3>Step 2</h3>
+                <p>Search for hotels or clinics.</p>
+            </div>
+            <div class="step">
+                <img src="easyBook.jpeg" alt="Book Icon">
+                            <h3>Step 3</h3>
+            <p>Book and enjoy!</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Stay Connected</h2>
+    <form>
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">Join the Waitlist</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2024 SomConnect. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+</footer>
+
+<script>
+    function handleJoin() {
+        alert("Thank you for joining the waitlist!");
+    }
+</script>
+</body>
+</html>
+
